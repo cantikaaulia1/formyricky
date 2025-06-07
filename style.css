@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  background: radial-gradient(circle, #f0f0ff, #e1e6ff);
+  overflow-x: hidden;
+}
+
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container {
+  z-index: 2;
+  position: relative;
+  background: #ffffffc7;
+  margin: 50px auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #6985ff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #5133d6;
+}
+
+button {
+  background-color: #7883ec;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Pacifico', cursive;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #8bb4ff;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 1em;
+  color: #555;
+}
+
+/* Slider */
+.slider {
+  margin: 20px auto;
+  position: relative;
+  height: 500px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: fade 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Animasi lucu */
+.animate-pop {
+  animation: pop 1s ease forwards;
+}
+
+@keyframes pop {
+  0% {transform: scale(0); opacity: 0;}
+  80% {transform: scale(1.1);}
+  100% {transform: scale(1); opacity: 1;}
+}
+
+.animate-fade {
+  animation: fade 2s ease forwards;
+}
+
+.animate-slide {
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Surat Cinta */
+.love-note {
+  background: #ffeef8;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+  color: #a52a2a;
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.love-note h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #e91e63;
+}
+
+.note-content {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.note-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.note-content::-webkit-scrollbar-thumb {
+  background: #696cff;
+  border-radius: 4px;
+}
